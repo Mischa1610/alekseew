@@ -7,5 +7,12 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "me-e2e": {
+      "tags": []
+    },
+    "me": {
+      "tags": ["scope:app"]
+    }
+  }
 }
