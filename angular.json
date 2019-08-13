@@ -77,7 +77,7 @@
               "apps/me/tsconfig.app.json",
               "apps/me/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": ["**/node_modules/**", "!apps/me/**"]
           }
         },
         "test": {
@@ -111,7 +111,10 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps/me-e2e/tsconfig.e2e.json"
+            "tsConfig": "apps/me-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "!apps/me-e2e/**"
+            ]
           }
         }
       }
