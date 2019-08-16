@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app/app.component';
+import { HeaderModule } from './header/header.module';
 
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    HeaderModule
   ],
   declarations: [AppComponent],
   providers: [],
