@@ -84,6 +84,7 @@ Run `npm run dep-graph` to see a diagram of the dependencies of your projects.
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
 =======
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Mischa1610/alekseew/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
@@ -98,7 +99,9 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 Syntax highlighted code block
 
 # Header 1
+
 ## Header 2
+
 ### Header 3
 
 - Bulleted

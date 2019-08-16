@@ -112,9 +112,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/me-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "!apps/me-e2e/**"
-            ]
+            "exclude": ["!apps/me-e2e/**"]
           }
         }
       }
