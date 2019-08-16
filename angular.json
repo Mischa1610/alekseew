@@ -6,13 +6,21 @@
     "me": {
       "projectType": "application",
       "schematics": {
-        "@nrwl/workspace:component": {
-          "style": "scss"
+        "@nrwl/angular:module": {
+          "commonModule": false
+        },
+        "@nrwl/angular:component": {
+          "prefix": "me",
+          "style": "scss",
+          "changeDetection": "OnPush"
+        },
+        "@nrwl/angular:directive": {
+          "prefix": "me"
         }
       },
       "root": "apps/me",
       "sourceRoot": "apps/me/src",
-      "prefix": "alekseew",
+      "prefix": "me",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,6 +30,7 @@
             "main": "apps/me/src/main.ts",
             "polyfills": "apps/me/src/polyfills.ts",
             "tsConfig": "apps/me/tsconfig.app.json",
+            "aot": true,
             "assets": ["apps/me/src/favicon.ico", "apps/me/src/assets"],
             "styles": ["apps/me/src/styles.scss"],
             "scripts": []
@@ -111,8 +120,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps/me-e2e/tsconfig.e2e.json",
-            "exclude": ["!apps/me-e2e/**"]
+            "tsConfig": ["apps/me-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/me-e2e/**"]
           }
         }
       }
@@ -120,8 +129,8 @@
   },
   "cli": {
     "warnings": {
-      "typescriptMismatch": false,
-      "versionMismatch": false
+      "typescriptMismatch": true,
+      "versionMismatch": true
     },
     "defaultCollection": "@nrwl/angular"
   },

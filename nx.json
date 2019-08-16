@@ -12,7 +12,7 @@
       "tags": []
     },
     "me": {
-      "tags": ["scope:app"]
+      "tags": ["scope:app", "me"]
     }
   }
 }
