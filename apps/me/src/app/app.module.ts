@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
+import { HeaderModule } from '@header/header.module';
+import { FooterModule } from '@footer/footer.module';
+
 import { AppComponent } from './app/app.component';
-import { HeaderModule } from './header/header.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     HeaderModule,
+    FooterModule,
   ],
   declarations: [AppComponent],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
