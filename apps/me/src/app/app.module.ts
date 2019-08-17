@@ -9,10 +9,10 @@ import { HeaderModule } from './header/header.module';
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    HeaderModule
+    HeaderModule,
   ],
   declarations: [AppComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

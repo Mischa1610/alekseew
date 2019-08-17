@@ -48,6 +48,14 @@
     "prefer-const": true,
     "radix": true,
     "triple-equals": [true, "allow-null-check"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never",
+        "esSpecCompliant": true
+      }
+    ],
     "unified-signatures": true,
     "variable-name": false,
     "nx-enforce-module-boundaries": [
