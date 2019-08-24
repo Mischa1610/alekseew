@@ -4,13 +4,13 @@ import { environment } from '@env/environment';
 
 const routes: Routes = [
   {
-    path: 'main',
+    path: 'home',
     loadChildren: () =>
       import(`./main/main.module`).then(module => module.MainModule),
   },
   {
     path: '',
-    redirectTo: '/main',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
 ];
