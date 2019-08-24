@@ -1,0 +1,69 @@
+.app {
+  &__shell {
+    display: grid;
+
+    grid-template-areas:
+      'appHeader appHeader appHeader'
+      'appNavigation appMain appSidebar'
+      'appFooter appFooter appFooter';
+
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+
+    height: 100vh;
+    padding: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__header {
+    grid-area: appHeader;
+  }
+
+  &__navigation {
+    grid-area: appNavigation;
+    margin-left: 0.5rem;
+  }
+
+  &__main {
+    grid-area: appMain;
+  }
+
+  &__sidebar {
+    grid-area: appSidebar;
+    margin-right: 0.5rem;
+  }
+
+  &__footer {
+    grid-area: appFooter;
+  }
+}
+
+// Smartphone
+// TODO: add breakpoints => Phone / Tablet / Medium Monitor / Large Monitor
+@media (max-width: 768px) {
+  .app {
+    &__shell {
+      grid-template-areas:
+        'appHeader'
+        'appNavigation'
+        'appMain'
+        'appSidebar'
+        'appFooter';
+
+      grid-template-columns: 1fr;
+      grid-template-rows:
+        auto /* Header */
+        minmax(75px, auto) /* Navigation */
+        1fr /* Main */
+        minmax(75px, auto) /* Sidebar */
+        auto; /* Footer */
+    }
+
+    &__navigation,
+    &__sidebar {
+      margin: 0;
+    }
+  }
+}
