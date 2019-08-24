@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prepare-git-commit-template": "git config commit.template .gitmessage || exit 0",
+    "postinstall": "npm run prepare-git-commit-template",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
