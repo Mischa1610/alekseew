@@ -2,12 +2,16 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "types": ["node", "jest"],
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@app/*": ["app/*"],
-      "@env/*": ["environments/*"],
-      "@header/*": ["app/header/*"],
-      "@footer/*": ["app/footer/*"]
+      "@env/*": ["src/environments/*"],
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/core/*"],
+      "@header/*": ["src/app/core/header/*"],
+      "@navigation/*": ["src/app/core/navigation/*"],
+      "@sidebar/*": ["src/app/core/sidebar/*"],
+      "@footer/*": ["src/app/core/footer/*"],
+      "@main/*": ["src/app/main/*"]
     }
   },
   "include": ["**/*.ts"]
