@@ -1,7 +1,30 @@
 {
   "name": "alekseew",
   "version": "0.0.0",
+  "description": "My monorepo for everything I want to develop, share, publish and much more.",
+  "keywords": [
+    "alekseew",
+    "Angular",
+    "Nest",
+    "TypeScript",
+    "NativeScript",
+    "Cross-Platform"
+  ],
+  "homepage": "https://mischa1610.github.io/alekseew",
+  "bugs": {
+    "url": "https://github.com/Mischa1610/alekseew/issues"
+  },
   "license": "MIT",
+  "private": true,
+  "author": "Michael Alekseew <alekseew.m@googlemail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mischa1610/alekseew.git"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.11.0"
+  },
   "scripts": {
     "prepare-git-commit-template": "git config commit.template .gitmessage || exit 0",
     "postinstall": "npm run prepare-git-commit-template",
@@ -29,7 +52,6 @@
     "help": "nx help",
     "nx": "nx"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^8.2.11",
     "@angular/common": "^8.2.11",
@@ -58,6 +80,8 @@
     "@angular/cli": "8.3.10",
     "@angular/compiler-cli": "^8.2.11",
     "@angular/language-service": "^8.2.11",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@nestjs/schematics": "^6.7.0",
     "@nestjs/testing": "^6.8.3",
     "@nrwl/cypress": "^8.6.0",
@@ -79,6 +103,7 @@
     "codelyzer": "^5.1.2",
     "cypress": "^3.4.1",
     "dotenv": "^8.2.0",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "jest-preset-angular": "^7.1.1",
     "prettier": "^1.18.2",
@@ -86,5 +111,15 @@
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "typescript": "^3.5.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

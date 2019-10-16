@@ -12,9 +12,7 @@ export class AppComponent {
 
   constructor() {
     console.log(
-      `%cAPP: ${environment.appTitle}; VERSION: ${
-        environment.appVersion
-      }; ENV-NAME: ${environment.envName}`,
+      `%cAPP: ${environment.appTitle}; VERSION: ${environment.appVersion}; ENV-NAME: ${environment.envName}`,
       'color: blue; font-weight: bold;',
     );
   }
