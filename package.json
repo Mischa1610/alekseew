@@ -22,7 +22,7 @@
     "url": "https://github.com/Mischa1610/alekseew.git"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=10.9.0",
     "npm": ">=6.11.0"
   },
   "scripts": {
@@ -32,7 +32,10 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "nx workspace-lint && ng lint",
+    "lint": "npm run lint:nx && npm run lint:ng",
+    "lint:nx": "nx workspace-lint",
+    "lint:ng": "ng lint",
+    "tslint": "tslint -p tsconfig.json",
     "e2e": "ng e2e",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
@@ -139,7 +142,8 @@
       "npm run format:check --"
     ],
     "*.{ts,tsx,js,jsx}": [
-      "npm run lint --"
+      "npm run lint:nx --",
+      "npm run tslint --"
     ]
   },
   "standard-version": {
