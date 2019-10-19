@@ -141,5 +141,15 @@
     "*.{ts,tsx,js,jsx}": [
       "npm run lint --"
     ]
+  },
+  "standard-version": {
+    "tagPrefix": "",
+    "releaseCommitMessageFormat": "chore(all): set version to {{currentTag}}, see changelog for details",
+    "skip": {
+      "tag": true
+    },
+    "scripts": {
+      "postchangelog": "prettier --write 'CHANGELOG.md'"
+    }
   }
 }
