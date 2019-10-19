@@ -1,1 +1,13 @@
 # Add files here to ignore them from prettier formatting
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# Dependency directories
+node_modules/
+jspm_packages/

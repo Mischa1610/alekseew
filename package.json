@@ -110,6 +110,7 @@
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "jest-preset-angular": "^7.1.1",
+    "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "standard-version": "^7.0.0",
     "ts-jest": "^24.1.0",
@@ -124,12 +125,21 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,html,css,scss,sass,less,md,yaml,sql}": [
+      "npm run format:check --"
+    ],
+    "*.{ts,tsx,js,jsx}": [
+      "npm run lint --"
+    ]
   }
 }
